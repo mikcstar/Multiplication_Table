@@ -21,14 +21,14 @@ while true; do
 
     # Prompt the user if they want a full or partial table
     echo "Do you want a full multiplication table (1-10) or a partial table?"
-    echo "Enter 'full' for full table or 'partial' for partial table: "
+    echo "Enter 'f' for full table or 'p' for partial table: "
     read table_type
 
     # Process user's choice
-    if [[ "$table_type" == "full" ]]; then
+    if [[ "$table_type" == "f" ]]; then
         start=1
         end=10
-    elif [[ "$table_type" == "partial" ]]; then
+    elif [[ "$table_type" == "p" ]]; then
         echo "Enter the start of the range: "
         read start
         echo "Enter the end of the range: "
@@ -50,7 +50,7 @@ while true; do
     # Ask the user if they want to repeat the process for another number
     echo "Do you want to generate a multiplication table for another number? (yes/no)"
     read repeat_choice
-    if [[ "$repeat_choice" != "yes" ]]; then
+    if [[ "$repeat_choice" != "y" ]]; then
         break
     fi
 done
