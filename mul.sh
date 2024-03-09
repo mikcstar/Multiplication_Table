@@ -44,8 +44,13 @@ while true; do
         end=10
     fi
 
+    # Ask the user if they want to see the table in ascending or descending order
+    echo "Do you want to see the table in ascending or descending order?"
+    echo "Enter 'ascending' or 'descending':"
+    read order_choice
+
     # Display the multiplication table
-    display_table "$start" "$end" "$user_number"
+    display_table "$start" "$end" "$user_number" "$order_choice"
 
     # Ask the user if they want to repeat the process for another number
     echo "Do you want to generate a multiplication table for another number? (yes/no)"
